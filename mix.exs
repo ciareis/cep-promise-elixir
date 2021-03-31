@@ -2,7 +2,7 @@ defmodule CepPromise.MixProject do
   use Mix.Project
 
   @app :cep_promise
-  @version "0.0.2"
+  @version "0.0.3"
   @repo "https://github.com/ciareis/cep-promise-elixir"
   @name "Cep Promise"
 
@@ -58,7 +58,8 @@ defmodule CepPromise.MixProject do
     [
       {:ex_doc, "~> 0.18", only: :dev},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:tesla, "~> 1.4.0"}
+      {:tesla, "~> 1.4.0"},
+      {:jason, ">= 1.0.0"}
     ]
   end
 end

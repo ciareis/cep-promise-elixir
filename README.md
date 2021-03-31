@@ -7,7 +7,7 @@ O pacote pode ser instalado adicionando `cep_promise` à sua lista de dependênc
 ```elixir
 def deps do
   [
-    {:cep_promise, "~> 0.0.2"}
+    {:cep_promise, "=> 0.0.3"}
   ]
 end
 ```

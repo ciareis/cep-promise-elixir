@@ -23,7 +23,7 @@ Busca por CEP integrado diretamente aos serviços BrasilAPI e ViaCEP, (logo impl
 
 ## Descrição
 
-Essa biblioteca é uma cópia da original feita pelo <a href="https://github.com/filipedeschamps" target="_blank">Filipe Deschamps (Michel Teló)</a> que achei a premissa bastante interessante e decidi copiá-la em Elixir.
+Essa biblioteca é uma cópia da original feita pelo [Filipe Deschamps (Michel Teló)](https://github.com/filipedeschamps) que achei a premissa bastante interessante e decidi copiá-la em Elixir.
 
 ## Features
 
@@ -35,19 +35,16 @@ Essa biblioteca é uma cópia da original feita pelo <a href="https://github.com
 A utilização é bem simples:
 
 ```elixir
-cep = CepPromise.get('80020100') 
-
-/** Endereço: 
- * {:ok,
-    %CepPromise.Cep{
-      cep: "80020100",
-      city: "Curitiba",
-      neighborhood: "Centro",
-      state: "PR",
-      street: "Praça Tiradentes"
-    }
+iex> CepPromise.info('80020100') 
+{:ok,
+  %CepPromise.Cep{
+    cep: "80020100",
+    city: "Curitiba",
+    neighborhood: "Centro",
+    state: "PR",
+    street: "Praça Tiradentes"
   }
-*/
+}
 ```
 
 ## Deixe suas sugestões
@@ -56,4 +53,4 @@ Fique a vontade para deixar sugestões nas issues!
 
 ## Fonte
 
-Esse pacote foi inspirado no original <a href="https://github.com/BrasilAPI/cep-promise">https://github.com/BrasilAPI/cep-promise</a>
+Esse pacote foi inspirado no original [https://github.com/BrasilAPI/cep-promise](https://github.com/BrasilAPI/cep-promise)

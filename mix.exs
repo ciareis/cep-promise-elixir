@@ -2,7 +2,7 @@ defmodule CepPromise.MixProject do
   use Mix.Project
 
   @app :cep_promise
-  @version "0.0.3"
+  @version "0.0.4"
   @repo "https://github.com/ciareis/cep-promise-elixir"
   @name "Cep Promise"
 

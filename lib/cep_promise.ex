@@ -19,6 +19,11 @@ defmodule CepPromise do
           }
       }
 
+      iex> CepPromise.info("00000000")
+      {:error, "CEP not found."}
+
+      iex> CepPromise.info("123")
+      {:error, "CEP Invalid."}
 
   """
   alias CepPromise.Providers.BrasilApi
@@ -55,7 +60,7 @@ defmodule CepPromise do
     cep
   end
 
-  defp search(_), do: {:error, "CEP Invalid"}
+  defp search(_), do: {:error, "CEP Invalid."}
 
   defp await(tasks) when is_list(tasks) and length(tasks) > 0 do
     # IO.inspect(tasks, label: "TASKS")
@@ -71,11 +76,11 @@ defmodule CepPromise do
         filter_tasks(tasks, reply)
 
       [] ->
-        {:error, "CEP não encontrado"}
+        {:error, "CEP not found."}
     end
   end
 
-  defp await(_), do: {:error, "CEP não encontrado"}
+  defp await(_), do: {:error, "CEP not found."}
 
   defp filter_tasks(tasks, reply) do
     Enum.filter(tasks, fn %Task{ref: ref} -> reply != ref end)

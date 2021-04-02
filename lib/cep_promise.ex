@@ -43,7 +43,7 @@ defmodule CepPromise do
       |> String.replace(".", "")
 
     case Regex.run(~r/[0-9]+/s, cep) do
-      nil -> {:error, "Cep inválido"}
+      nil -> {:error, "CEP Invalid."}
       [value | _] -> value
     end
   end

@@ -22,7 +22,7 @@ defmodule CepPromise.Cep do
 
   @enforce_keys @keys
 
-  defstruct @keys
+  defstruct @keys ++ [:service]
 
   def build(cep, state, city, street, neighborhood, _service) do
     %__MODULE__{
@@ -31,6 +31,7 @@ defmodule CepPromise.Cep do
       neighborhood: neighborhood,
       city: city,
       state: state
+      # service: service
     }
   end
 

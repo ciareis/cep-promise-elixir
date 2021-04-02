@@ -54,5 +54,3 @@ Fique a vontade para deixar sugestões nas issues!
 ## Fonte
 
 Esse pacote foi inspirado no original [https://github.com/BrasilAPI/cep-promise](https://github.com/BrasilAPI/cep-promise)
-
-Fonte [https://github.com/ciareis/cep-promise-elixir](https://github.com/ciareis/cep-promise-elixir)
